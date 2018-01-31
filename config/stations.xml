@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <stations>
-<entry name="Домашний каталог" type="local" mount="/home/projekt" mode="mount_ro,no_symlink"/>
+<entry name="Домашний каталог" type="local" mount="/home/projekt/Workspace" mode="mount_ro,no_symlink"/>
 <entry name="Станция_1" type="net" host="192.168.56.101" user="projekt" remote=":/home/projekt" mount="/mount.storage/projekt_192.168.56.101" id_rsa="/home/projekt/.ssh/id_rsa" options="compression=yes,cache=no" mode="mount_ro,show_hid,no_symlink"/>
 <entry name="Станция_2" type="net" host="192.168.56.105" user="projekt" remote=":/home/projekt" mount="/mount.storage/projekt_192.168.56.105" id_rsa="/home/projekt/.ssh/id_rsa" options="compression=yes,cache=no" mode="mount_ro"/>
 </stations>

@@ -5,6 +5,8 @@
 #include <QKeyEvent>
 #include <QDir>
 #include <QFocusEvent>
+#include <QItemSelectionModel>
+#include <QModelIndex>
 
 #include <QDebug>
 
@@ -50,10 +52,13 @@ private:
 
     QString currentDir;
 
+    void selectCurrentRow();
+
 signals:
     void keyEnter();
     void keyTab();
-
+    void selectItem();
+    void selectAllItems();
 };
 
 #endif // CUSTOMTABLEVIEW_H

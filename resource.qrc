@@ -11,6 +11,5 @@
         <file>images/drive-harddisk.png</file>
         <file>images/transfer.png</file>
         <file>config/stations.xml</file>
-        <file>images/cat_.jpg</file>
     </qresource>
 </RCC>

@@ -20,6 +20,7 @@
 #include <QDebug>
 
 #include "customtableview.h"
+#include "customfilesystemmodel.h"
 #include "filesystementry.h"
 #include "configxmlreader.h"
 
@@ -60,6 +61,8 @@ private slots:
     void changeIndex();
 
     void selectionChanged(const QModelIndex &current, const QModelIndex &previous);
+    void selectCurrentItem();
+    void selectAll();
 
     const QString &LEFT()
     {
@@ -78,9 +81,9 @@ private slots:
 private:
     Ui::MainWindow *ui;
 
-    QFileSystemModel *fileModelLeft;
+    CustomFileSystemModel *fileModelLeft;
+    CustomFileSystemModel *fileModelRight;
     QSortFilterProxyModel *proxyModelLeft;
-    QFileSystemModel *fileModelRight;
     QSortFilterProxyModel *proxyModelRight;
     CustomTableView *panelLeft;
     CustomTableView *panelRight;

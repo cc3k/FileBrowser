@@ -16,12 +16,14 @@ SOURCES += main.cpp\
         mainwindow.cpp \
     customtableview.cpp \
     configxmlreader.cpp \
-    filesystementry.cpp
+    filesystementry.cpp \
+    customfilesystemmodel.cpp
 
 HEADERS  += mainwindow.h \
     customtableview.h \
     configxmlreader.h \
-    filesystementry.h
+    filesystementry.h \
+    customfilesystemmodel.h
 
 FORMS    += mainwindow.ui
 

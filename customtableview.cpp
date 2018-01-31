@@ -67,6 +67,12 @@ void CustomTableView::setRowCount(int value)
     rowCount = value;
 }
 
+void CustomTableView::selectCurrentRow()
+{
+    qDebug() << currentIndex().data(Qt::DisplayRole);
+    qDebug() << "selectRow";
+}
+
 void CustomTableView::keyPressEvent(QKeyEvent *event)
 {
     switch (event->key())
@@ -84,6 +90,13 @@ void CustomTableView::keyPressEvent(QKeyEvent *event)
         break;
     }
 
+    case Qt::Key_Space:
+    case Qt::Key_Insert:
+    {
+        emit selectItem();
+        break;
+    }
+
     default:
         QTableView::keyPressEvent(event);
         break;
@@ -94,13 +107,11 @@ void CustomTableView::keyPressEvent(QKeyEvent *event)
 void CustomTableView::focusInEvent(QFocusEvent *event)
 {
     selectRow(currentIndex().row());
-
     QTableView::focusInEvent(event);
 }
 
 void CustomTableView::focusOutEvent(QFocusEvent *event)
 {
     clearSelection();
-
     QTableView::focusOutEvent(event);
 }
